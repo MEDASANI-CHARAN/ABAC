@@ -3,7 +3,7 @@ module "db" {
 
   identifier = "${var.project_name}-${var.environment}"
 
-  engine            = "prod"
+  engine            = "mysql"
   engine_version    = "8.0"
   instance_class    = "db.t3.micro"
   allocated_storage = 5
@@ -74,7 +74,7 @@ module "records" {
 
   records = [
     {
-      name    = "db-${var.environment}"
+      name    = "prod"
       type    = "CNAME"
       ttl     = 1
       records = [

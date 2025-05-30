@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket = "daws78s.xyz-remote-state"
-    key    = "vpc-module-expense-infra-test-sg"
+    key    = "vpc-module-expense-infra-test-sg-dev"
     region = "us-east-1"
     dynamodb_table = "daws78s.xyz-locking-demo"
   }
